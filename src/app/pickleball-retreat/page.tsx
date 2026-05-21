@@ -1,11 +1,61 @@
+import Link from 'next/link'
+
+const retreatMoments = [
+  {
+    time: '8:00 AM',
+    title: 'Slow Mornings by the Sea',
+    text: 'A relaxed breakfast at the villa, fresh coffee by the ocean, and the sound of the waves to start the day.',
+  },
+  {
+    time: '9:00 AM – 12:00 PM',
+    title: 'Morning on the Courts',
+    text: 'Morning pickleball session at the club. Friendly competition, coaching, and plenty of time on court.',
+  },
+  {
+    time: '12:30 PM',
+    title: 'Fresh & Healthy Lunches',
+    text: 'A light and flavorful lunch prepared by your private chef at the villa.',
+  },
+  {
+    time: '2:00 PM',
+    title: 'Time to Recharge',
+    text: 'A slower afternoon. Read by the pool, walk along the coastline, enjoy a massage, or simply do nothing at all.',
+  },
+  {
+    time: '5:00 PM',
+    title: 'Golden Hour & Flexible Evenings',
+    text: 'Happy hour at the villa. Some guests may head back for another match, while others settle in with a cocktail to watch the sun disappear into the sea.',
+  },
+  {
+    time: '7:00 PM',
+    title: 'Dinner Barefoot in Cabarete',
+    text: 'Dinner together, barefoot in the sand, in the beautiful bay of Cabarete.',
+  },
+]
+
 export default function PickleballRetreatPage() {
   return (
     <main className="bg-[#f7f2ea] text-[#15211f] overflow-hidden">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-[#0d342f]/55 backdrop-blur-md text-[#fffaf3] border-b border-white/10">
+        <div className="px-[7vw] h-20 flex items-center justify-between">
+          <Link href="/" className="font-serif tracking-[0.28em] text-[22px] uppercase">
+            Vyllara
+          </Link>
+
+          <nav className="hidden lg:flex items-center gap-9 text-[12px] uppercase tracking-[0.18em]">
+            <Link href="/">Home</Link>
+            <Link href="/family-retreat">Family Retreat</Link>
+            <Link href="/pickleball-retreat">Pickleball Retreat</Link>
+            <Link href="#quote">Get a Quote</Link>
+          </nav>
+        </div>
+      </header>
+
       <section
-        className="relative min-h-[82vh] flex items-end px-[7vw] pb-24 pt-28"
+        className="relative min-h-[88vh] flex items-end px-[7vw] pb-24 pt-32"
         style={{
           backgroundImage:
-            "linear-gradient(90deg, rgba(9,35,32,.72), rgba(9,35,32,.26), rgba(9,35,32,.05)), url('/Hero Pickleball Retreat.jpeg')",
+            "linear-gradient(90deg, rgba(9,35,32,.72), rgba(9,35,32,.28), rgba(9,35,32,.08)), url('/images/hero-pickleball-retreat.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -84,39 +134,8 @@ export default function PickleballRetreatPage() {
 
       <section className="px-[7vw] pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-10 text-center">
-          {[
-            {
-              time: '8:00 AM',
-              title: 'Slow Mornings by the Sea',
-              text: 'A relaxed breakfast at the villa, fresh coffee by the ocean, and the sound of the waves to start the day.',
-            },
-            {
-              time: '9:00 AM – 12:00 PM',
-              title: 'Morning on the Courts',
-              text: 'Morning pickleball session at the club. Friendly competition, coaching, and plenty of time on court.',
-            },
-            {
-              time: '12:30 PM',
-              title: 'Fresh & Healthy Lunches',
-              text: 'A light and flavorful lunch prepared by your private chef at the villa.',
-            },
-            {
-              time: '2:00 PM',
-              title: 'Time to Recharge',
-              text: 'A slower afternoon. Read by the pool, walk along the coastline, enjoy a massage, or simply do nothing at all.',
-            },
-            {
-              time: '5:00 PM',
-              title: 'Golden Hour & Flexible Evenings',
-              text: 'Happy hour at the villa. Some guests may head back for another match, while others settle in with a cocktail to watch the sun disappear into the sea.',
-            },
-            {
-              time: '7:00 PM',
-              title: 'Dinner Barefoot in Cabarete',
-              text: 'Dinner together, barefoot in the sand, in the beautiful bay of Cabarete.',
-            },
-          ].map((item, index) => (
-            <div key={index}>
+          {retreatMoments.map((item) => (
+            <div key={item.time}>
               <div className="w-14 h-14 mx-auto rounded-full border border-[#a77a3b]/40 mb-5" />
 
               <div className="uppercase tracking-[0.15em] text-[12px] text-[#a77a3b] font-semibold mb-3">
@@ -135,8 +154,8 @@ export default function PickleballRetreatPage() {
 
       <section>
         <img
-          src="/bandeau Pickle.jpeg"
-          alt="Pickleball"
+          src="/images/bandeau-pickleball.png"
+          alt="Pickleball players on outdoor courts"
           className="w-full h-[390px] object-cover"
         />
       </section>
@@ -210,7 +229,36 @@ export default function PickleballRetreatPage() {
           </a>
         </div>
       </section>
+
+      <footer className="bg-[#0d342f] text-[#fffaf3] px-[7vw] py-16">
+        <div className="grid md:grid-cols-3 gap-10 items-start">
+          <div>
+            <div className="font-serif tracking-[0.28em] text-[24px] uppercase mb-4">
+              Vyllara
+            </div>
+            <p className="text-[#fffaf3]/70 text-[14px] leading-relaxed max-w-sm">
+              Premium private retreats with villa accommodations, curated experiences, and time to reconnect.
+            </p>
+          </div>
+
+          <div className="text-[13px] uppercase tracking-[0.16em] space-y-3 text-[#fffaf3]/75">
+            <Link href="/">Home</Link>
+            <br />
+            <Link href="/family-retreat">Family Retreat</Link>
+            <br />
+            <Link href="/pickleball-retreat">Pickleball Retreat</Link>
+          </div>
+
+          <div className="md:text-right">
+            <a
+              href="#quote"
+              className="inline-flex border border-[#fffaf3]/50 px-8 py-4 uppercase tracking-[0.18em] text-[12px] hover:bg-white/10 transition"
+            >
+              Get a Quote →
+            </a>
+          </div>
+        </div>
+      </footer>
     </main>
   )
 }
-
