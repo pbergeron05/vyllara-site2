@@ -75,6 +75,24 @@ export default function FamilyRetreatPage() {
     </div>
   </div>
 </section>
+<section className="relative h-[420px] overflow-hidden">
+  <div className="absolute inset-0 bg-[url('/experience-section.jpeg')] bg-cover bg-center" />
+  <div className="absolute inset-0 bg-black/30" />
+
+  <div className="relative z-10 flex h-full items-center justify-center px-6 text-center">
+    <div className="max-w-5xl text-white">
+      <p className="mb-6 text-sm uppercase tracking-[0.34em] text-[#e8c69b]">
+        Cabarete, Dominican Republic
+      </p>
+
+      <h2 className="font-serif text-5xl leading-tight md:text-7xl">
+        A place where every generation
+        <br />
+        finds its own rhythm.
+      </h2>
+    </div>
+  </div>
+</section>
     </main>
   );
 }
