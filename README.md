@@ -1,2 +1,3 @@
-# vyllara-site2
-Luxury active retreats in Cabarete.
+# VYLLARA site
+
+Next.js homepage ready for Vercel.

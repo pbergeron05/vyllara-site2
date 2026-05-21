@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { background:#f5f1ea; color:#1c1b1a; -webkit-font-smoothing: antialiased; }
+@keyframes slowHero { from { transform: scale(1.03) translate3d(0,0,0); } to { transform: scale(1.15) translate3d(-32px,-14px,0); } }
