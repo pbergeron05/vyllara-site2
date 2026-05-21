@@ -2,38 +2,123 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
+type DayItem = {
+  time: string;
+  title: string;
+  text: string;
+  icon: React.ReactNode;
+};
+
+function SunIcon() {
+  return (
+    <svg viewBox="0 0 64 64" className="h-12 w-12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 39h40" />
+      <path d="M20 39a12 12 0 0 1 24 0" />
+      <path d="M8 47h10M24 47h16M46 47h10" />
+      <path d="M32 14V7M18 23l-5-5M46 23l5-5" />
+    </svg>
+  );
+}
+
+function PaddleIcon() {
+  return (
+    <svg viewBox="0 0 64 64" className="h-12 w-12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M22 43 39 26c4-4 10-4 14 0s4 10 0 14L36 57" />
+      <path d="M28 57 11 40c-4-4-4-10 0-14s10-4 14 0l17 17" />
+      <circle cx="47" cy="14" r="6" />
+      <path d="M45 12h.1M49 12h.1M47 16h.1" />
+    </svg>
+  );
+}
+
+function LunchIcon() {
+  return (
+    <svg viewBox="0 0 64 64" className="h-12 w-12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M15 28h34v6a17 17 0 0 1-34 0v-6Z" />
+      <path d="M20 50h24" />
+      <path d="M25 25c-4-7-2-13 4-17" />
+      <path d="M34 25c-1-7 2-12 9-16" />
+      <path d="M25 25c6-2 12-2 18 0" />
+    </svg>
+  );
+}
+
+function LoungeIcon() {
+  return (
+    <svg viewBox="0 0 64 64" className="h-12 w-12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M10 45h37" />
+      <path d="M19 45 38 22l10 8-15 15" />
+      <path d="M48 45h7" />
+      <path d="M52 31v18" />
+      <path d="M47 36h10" />
+      <path d="M50 24c4-4 9-4 12 0" />
+    </svg>
+  );
+}
+
+function CocktailIcon() {
+  return (
+    <svg viewBox="0 0 64 64" className="h-12 w-12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M16 13h32L32 34 16 13Z" />
+      <path d="M32 34v18" />
+      <path d="M23 52h18" />
+      <circle cx="49" cy="13" r="7" />
+      <path d="M45 8l8 10" />
+    </svg>
+  );
+}
+
+function DinnerIcon() {
+  return (
+    <svg viewBox="0 0 64 64" className="h-12 w-12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M10 40h44" />
+      <path d="M19 40a13 13 0 0 1 26 0" />
+      <path d="M10 48h10M27 48h11M45 48h9" />
+      <path d="M50 24c4-8 10-10 10-10" />
+      <path d="M50 24c7-3 12-1 12-1" />
+      <path d="M50 25v15" />
+    </svg>
+  );
+}
+
 export default function PickleballRetreatPage() {
-  const day = [
-    [
-      "8:00 AM",
-      "Slow Mornings by the Sea",
-      "A relaxed breakfast at the villa, fresh coffee by the ocean, and the sound of the waves to start the day.",
-    ],
-    [
-      "9:00 AM – 12:00 PM",
-      "Morning on the Courts",
-      "Morning pickleball session at the club. Friendly competition, coaching, and plenty of time on court.",
-    ],
-    [
-      "12:30 PM",
-      "Fresh & Healthy Lunches",
-      "A light and flavorful lunch prepared by your private chef at the villa.",
-    ],
-    [
-      "2:00 PM",
-      "Time to Recharge",
-      "A slower afternoon. Read by the pool, walk along the coastline, enjoy a massage, or simply do nothing at all.",
-    ],
-    [
-      "5:00 PM",
-      "Golden Hour & Flexible Evenings",
-      "Happy hour at the villa. Some guests may head back for another match, while others settle in with a cocktail to watch the sun disappear into the sea.",
-    ],
-    [
-      "7:00 PM",
-      "Dinner Barefoot in Cabarete",
-      "Dinner together, barefoot in the sand, in the beautiful bay of Cabarete.",
-    ],
+  const day: DayItem[] = [
+    {
+      time: "8:00 AM",
+      title: "Slow Mornings by the Sea",
+      text: "A relaxed breakfast at the villa, fresh coffee by the ocean, and the sound of the waves to start the day.",
+      icon: <SunIcon />,
+    },
+    {
+      time: "9:00 AM – 12:00 PM",
+      title: "Morning on the Courts",
+      text: "Morning pickleball session at the club. Friendly competition, coaching, and plenty of time on court.",
+      icon: <PaddleIcon />,
+    },
+    {
+      time: "12:30 PM",
+      title: "Fresh & Healthy Lunches",
+      text: "A light and flavorful lunch prepared by your private chef at the villa.",
+      icon: <LunchIcon />,
+    },
+    {
+      time: "2:00 PM",
+      title: "Time to Recharge",
+      text: "A slower afternoon. Read by the pool, walk along the coastline, enjoy a massage, or simply do nothing at all.",
+      icon: <LoungeIcon />,
+    },
+    {
+      time: "5:00 PM",
+      title: "Golden Hour & Flexible Evenings",
+      text: "Happy hour at the villa. Some guests may head back for another match, while others settle in with a cocktail to watch the sun disappear into the sea.",
+      icon: <CocktailIcon />,
+    },
+    {
+      time: "7:00 PM",
+      title: "Dinner Barefoot in Cabarete",
+      text: "Dinner together, barefoot in the sand, in the beautiful bay of Cabarete.",
+      icon: <DinnerIcon />,
+    },
   ];
 
   return (
@@ -42,7 +127,7 @@ export default function PickleballRetreatPage() {
 
       {/* HERO */}
       <section className="relative min-h-[92vh] overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/hero-pickleball-retreat.png')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('/hero-pickleball-retreat.png')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-black/30" />
 
         <div className="relative z-10 flex min-h-[92vh] items-center px-6 md:px-20">
@@ -130,24 +215,32 @@ export default function PickleballRetreatPage() {
             </p>
 
             <div className="mt-8">
-              {day.map(([time, title, text]) => (
+              {day.map(({ time, title, text, icon }) => (
                 <div
                   key={time}
                   className="relative border-b border-[#ddd0bb] py-7 first:pt-0 last:border-b-0"
                 >
                   <span className="absolute -left-[39px] top-8 h-3 w-3 rounded-full border border-[#a87545] bg-[#f8f3eb] md:-left-[55px]" />
 
-                  <p className="text-sm uppercase tracking-[0.22em] text-[#a87545]">
-                    {time}
-                  </p>
+                  <div className="flex gap-6">
+                    <div className="hidden shrink-0 text-[#8f734c] sm:block">
+                      {icon}
+                    </div>
 
-                  <h3 className="mt-2 font-serif text-3xl">
-                    {title}
-                  </h3>
+                    <div>
+                      <p className="text-sm uppercase tracking-[0.22em] text-[#a87545]">
+                        {time}
+                      </p>
 
-                  <p className="mt-2 text-lg leading-8 text-[#4b4339]">
-                    {text}
-                  </p>
+                      <h3 className="mt-2 font-serif text-3xl">
+                        {title}
+                      </h3>
+
+                      <p className="mt-2 text-lg leading-8 text-[#4b4339]">
+                        {text}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -157,7 +250,7 @@ export default function PickleballRetreatPage() {
 
       {/* PICKLEBALL BANNER */}
       <section className="relative h-[420px] overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/bandeau-pickleball.png')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('/bandeau-pickleball.png')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-black/25" />
 
         <div className="relative z-10 flex h-full items-center justify-center px-6 text-center text-white">
@@ -247,7 +340,7 @@ export default function PickleballRetreatPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#efe4d4] px-6 py-28 text-center">
+      <section className="bg-[#efe4d4] px-6 py-28 text-center" id="quote">
         <div className="mx-auto max-w-5xl">
           <p className="uppercase tracking-[0.34em] text-sm text-[#a87545]">
             Private Pickleball Retreats
