@@ -16,6 +16,7 @@ export default function FamilyRetreatPage() {
     <main className="min-h-screen bg-[#f5efe5] text-[#191713]">
       <Header />
 
+      {/* HERO */}
       <section className="relative min-h-[92vh] overflow-hidden">
         <div className="absolute inset-0 bg-[url('/family-hero.png')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-black/25" />
@@ -34,8 +35,14 @@ export default function FamilyRetreatPage() {
               <p className="uppercase tracking-[0.22em] text-sm text-white/60">
                 Starting from
               </p>
-              <p className="font-serif text-6xl mt-3">$2,000 USD</p>
-              <p className="mt-2 text-white/75">per person</p>
+
+              <p className="font-serif text-6xl mt-3">
+                $2,000 USD
+              </p>
+
+              <p className="mt-2 text-white/75">
+                per person
+              </p>
             </div>
 
             <button className="mt-10 bg-[#7b6a52] px-10 py-5 uppercase tracking-[0.16em] text-sm">
@@ -45,6 +52,7 @@ export default function FamilyRetreatPage() {
         </div>
       </section>
 
+      {/* TYPICAL DAY */}
       <section className="bg-[#f8f3eb] px-6 py-28 md:px-16">
         <div className="mx-auto max-w-7xl grid gap-20 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
@@ -59,49 +67,79 @@ export default function FamilyRetreatPage() {
             <div className="my-8 h-px w-20 bg-[#a87545]" />
 
             <div className="space-y-6 text-lg leading-8 text-[#4b4339]">
-              <p>Vyllara offers a retreat concept thoughtfully designed for families and multigenerational stays.</p>
-              <p>We work with private properties welcoming between 8 and 20 guests, allowing everyone to naturally find their own rhythm throughout the stay.</p>
-              <p>Every generation can enjoy the experience differently while still sharing meaningful moments together.</p>
+              <p>
+                Vyllara offers a retreat concept thoughtfully designed for families and multigenerational stays.
+              </p>
+
+              <p>
+                We work with private properties welcoming between 8 and 20 guests, allowing everyone to naturally find their own rhythm throughout the stay.
+              </p>
+
+              <p>
+                Every generation can enjoy the experience differently while still sharing meaningful moments together.
+              </p>
             </div>
           </div>
 
           <div className="border-l border-[#d9c9ae] pl-8 md:pl-12">
             {day.map(([time, title, text]) => (
-              <div key={time} className="relative border-b border-[#ddd0bb] py-7 first:pt-0 last:border-b-0">
+              <div
+                key={time}
+                className="relative border-b border-[#ddd0bb] py-7 first:pt-0 last:border-b-0"
+              >
                 <span className="absolute -left-[39px] top-8 h-3 w-3 rounded-full border border-[#a87545] bg-[#f8f3eb] md:-left-[55px]" />
-                <p className="text-sm uppercase tracking-[0.22em] text-[#a87545]">{time}</p>
-                <h3 className="mt-2 font-serif text-3xl">{title}</h3>
-                <p className="mt-2 text-lg leading-8 text-[#4b4339]">{text}</p>
+
+                <p className="text-sm uppercase tracking-[0.22em] text-[#a87545]">
+                  {time}
+                </p>
+
+                <h3 className="mt-2 font-serif text-3xl">
+                  {title}
+                </h3>
+
+                <p className="mt-2 text-lg leading-8 text-[#4b4339]">
+                  {text}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* BEACH BANNER */}
       <section className="relative h-[420px] overflow-hidden">
         <div className="absolute inset-0 bg-[url('/family-day.png')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-black/30" />
+
         <div className="relative z-10 flex h-full items-center justify-center px-6 text-center text-white">
           <div className="max-w-5xl">
             <p className="mb-6 text-sm uppercase tracking-[0.34em] text-[#e8c69b]">
               Cabarete, Dominican Republic
             </p>
+
             <h2 className="font-serif text-5xl leading-tight md:text-7xl">
-              A place where every generation<br />finds its own rhythm.
+              A place where every generation
+              <br />
+              finds its own rhythm.
             </h2>
           </div>
         </div>
       </section>
 
+      {/* INCLUDED / EXCLUDED */}
       <section className="bg-[#fffaf2] px-6 py-28 md:px-16">
         <div className="mx-auto max-w-7xl grid gap-20 lg:grid-cols-2">
+
+          {/* INCLUDED */}
           <div>
             <p className="uppercase tracking-[0.3em] text-sm text-[#a87545]">
               What’s Included
             </p>
+
             <h2 className="mt-5 font-serif text-5xl leading-none">
               Effortless by Design
             </h2>
+
             <div className="my-8 h-px w-20 bg-[#a87545]" />
 
             {[
@@ -110,23 +148,37 @@ export default function FamilyRetreatPage() {
               ["➜", "Private Driver", "Transportation for airport transfers, activities and local experiences."],
               ["◆", "Dedicated Concierge", "Personalized planning before and during your entire stay."]
             ].map(([icon, title, text]) => (
-              <div key={title} className="flex gap-6 border-b border-[#e4d6c2] py-7">
-                <div className="w-12 text-5xl text-[#8f734c]">{icon}</div>
+              <div
+                key={title}
+                className="flex gap-6 border-b border-[#e4d6c2] py-7"
+              >
+                <div className="w-12 text-5xl text-[#8f734c]">
+                  {icon}
+                </div>
+
                 <div>
-                  <h3 className="font-serif text-3xl">{title}</h3>
-                  <p className="mt-2 text-lg leading-8 text-[#4b4339]">{text}</p>
+                  <h3 className="font-serif text-3xl">
+                    {title}
+                  </h3>
+
+                  <p className="mt-2 text-lg leading-8 text-[#4b4339]">
+                    {text}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
 
+          {/* EXCLUDED */}
           <div>
             <p className="uppercase tracking-[0.3em] text-sm text-[#a87545]">
               What’s Not Included
             </p>
+
             <h2 className="mt-5 font-serif text-5xl leading-none">
               Additional Costs
             </h2>
+
             <div className="my-8 h-px w-20 bg-[#a87545]" />
 
             {[
@@ -135,18 +187,32 @@ export default function FamilyRetreatPage() {
               ["⌬", "Alcoholic Beverages", "Wine, cocktails and specialty beverages outside villa inclusions."],
               ["≈", "Optional Activities", "Private lessons, excursions and experiences arranged à la carte."]
             ].map(([icon, title, text]) => (
-              <div key={title} className="flex gap-6 border-b border-[#e4d6c2] py-7">
-                <div className="w-12 text-5xl text-[#8f734c]">{icon}</div>
+              <div
+                key={title}
+                className="flex gap-6 border-b border-[#e4d6c2] py-7"
+              >
+                <div className="w-12 text-5xl text-[#8f734c]">
+                  {icon}
+                </div>
+
                 <div>
-                  <h3 className="font-serif text-3xl">{title}</h3>
-                  <p className="mt-2 text-lg leading-8 text-[#4b4339]">{text}</p>
+                  <h3 className="font-serif text-3xl">
+                    {title}
+                  </h3>
+
+                  <p className="mt-2 text-lg leading-8 text-[#4b4339]">
+                    {text}
+                  </p>
                 </div>
               </div>
             ))}
           </div>
+
         </div>
 
+        {/* OPTIONAL ACTIVITIES */}
         <div className="mx-auto mt-24 max-w-7xl border-t border-[#e4d6c2] pt-16">
+
           <p className="text-center uppercase tracking-[0.3em] text-sm text-[#a87545]">
             Optional Experiences
           </p>
@@ -165,7 +231,10 @@ export default function FamilyRetreatPage() {
               ["Local Discovery", ["Horseback Riding", "Waterfalls", "Local Experiences", "Cabarete Dining"]]
             ].map(([title, items]) => (
               <div key={title as string}>
-                <h3 className="font-serif text-3xl">{title as string}</h3>
+                <h3 className="font-serif text-3xl">
+                  {title as string}
+                </h3>
+
                 <ul className="mt-6 space-y-4 text-lg text-[#4b4339]">
                   {(items as string[]).map((item) => (
                     <li key={item}>{item}</li>
@@ -177,8 +246,10 @@ export default function FamilyRetreatPage() {
         </div>
       </section>
 
+      {/* CTA */}
       <section className="bg-[#efe4d4] px-6 py-28 text-center">
         <div className="mx-auto max-w-5xl">
+
           <p className="uppercase tracking-[0.34em] text-sm text-[#a87545]">
             Family Active Escapes
           </p>
@@ -189,8 +260,13 @@ export default function FamilyRetreatPage() {
 
           <div className="mx-auto my-10 h-px w-20 bg-[#a87545]" />
 
-          <p className="font-serif text-6xl text-[#a87545]">$2,000 USD</p>
-          <p className="mt-3 text-lg text-[#4b4339]">per person</p>
+          <p className="font-serif text-5xl md:text-6xl text-[#a87545]">
+            $2,000 – $2,500 USD
+          </p>
+
+          <p className="mt-3 text-lg text-[#4b4339]">
+            per person • depending on villa selection and season
+          </p>
 
           <button className="mt-10 bg-[#7b6a52] px-12 py-5 uppercase tracking-[0.18em] text-sm text-white">
             Get a Quote
