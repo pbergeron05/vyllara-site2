@@ -46,7 +46,35 @@ export default function FamilyRetreatPage() {
           </div>
         </div>
       </section>
+<section className="bg-[#f8f3eb] px-6 py-24 md:px-16">
+  <div className="mx-auto max-w-6xl">
+    <div className="max-w-3xl">
+      <p className="uppercase tracking-[0.3em] text-sm text-[#a87545]">
+        A Typical Day
+      </p>
 
+      <h2 className="mt-5 font-serif text-5xl md:text-6xl leading-none text-[#191713]">
+        At Your Own Pace
+      </h2>
+
+      <div className="my-8 h-px w-20 bg-[#a87545]" />
+
+      <div className="space-y-6 text-lg leading-8 text-[#4b4339]">
+        <p>
+          Vyllara offers a retreat concept thoughtfully designed for families and multigenerational stays.
+        </p>
+
+        <p>
+          We work with private properties welcoming between 8 and 20 guests, allowing everyone to naturally find their own rhythm throughout the stay.
+        </p>
+
+        <p>
+          Every generation can enjoy the experience differently while still sharing meaningful moments together.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
     </main>
   );
 }
