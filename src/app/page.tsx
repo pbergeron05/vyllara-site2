@@ -6,7 +6,7 @@ export default function FamilyRetreatPage() {
 
       {/* HERO */}
       <section className="relative min-h-[92vh] overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2400&q=85')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com//family-hero.png')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-black/40" />
 
         <div className="relative z-10 flex min-h-[92vh] items-center px-6 md:px-20">
